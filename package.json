@@ -1,0 +1,29 @@
+{
+  "name": "civic-me",
+  "version": "1.0.0",
+  "description": "Final project for The Coding Bootcamp at UT. This single-page application uses the city's API to retrieve City Council agenda items, which users are able to track by logging in and saving particular items from the upcoming meetings.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/velasja/civic-me.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/velasja/civic-me/issues"
+  },
+  "homepage": "https://github.com/velasja/civic-me#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.5",
+    "morgan": "^1.8.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1"
+  }
+}
