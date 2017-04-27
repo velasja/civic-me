@@ -1,8 +1,17 @@
 import React from 'react';
+console.log(React);
+
 import ReactDOM from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBarExampleIcon from './components/AppBar';
-import TextFieldExampleSimple from './components/Login';
+
+import Root from "./config/routes";
+console.log(Root);
+import { BrowserRouter } from "./config/routes";
+console.log(BrowserRouter);
+
+//
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+// import AppBarExampleIcon from './components/AppBar';
+// import TextFieldExampleSimple from './components/Login';
 
 // class Poop extends React.Component {
 //   render() {
@@ -10,10 +19,4 @@ import TextFieldExampleSimple from './components/Login';
 //   }
 // }
 
-const App = () => (
-  <MuiThemeProvider>
-    <TextFieldExampleSimple />
-  </MuiThemeProvider>
-);
-
-ReactDOM.render(<App />, document.querySelector('#app'));
+ReactDOM.render(<BrowserRouter/>, document.getElementById('app'));

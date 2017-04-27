@@ -3,6 +3,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
+var path = require('path');
 
 // Require Schemas
 var Item = require("./server/model");
@@ -18,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-app.use(express.static("./public"));
+app.use(express.static(__dirname + '/public'));
 
 // -------------------------------------------------
 
@@ -85,7 +86,7 @@ app.delete("/api/saved/", function(req, res) {
 
 // Any non API GET routes will be directed to our React App and handled by React Router
 app.get("*", function(req, res) {
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
 

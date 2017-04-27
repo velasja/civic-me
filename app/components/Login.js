@@ -26,19 +26,23 @@ import React from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
-const TextFieldExampleSimple = () => (
-  <div className="container">
-    <div className="col">
-      <TextField
-        hintText="Email"
-      /><br />
-      <br />
-      <TextField className="password"
-        hintText="Password"
-      /><br />
-      <RaisedButton className="loginButton" label="Login" primary={true} style="margin:30 0" />
-    </div>
-  </div>
-);
+class Login extends React.Component {
+  render() {
+    return (
+      <div className="container">
+        <div className="col">
+          <TextField
+            hintText="Email"
+          /><br />
+          <br />
+          <TextField className="password"
+            hintText="Password"
+          /><br />
+          <RaisedButton className="loginButton" label="Login" primary={true} style="margin:30 0" />
+        </div>
+      </div>
+    )
+  };
+};
 
-export default TextFieldExampleSimple;
+export default Login;

@@ -1,16 +1,9 @@
 import React from 'react';
-import AppBar from 'material-ui/AppBar';
-import { render }  from 'react-dom';
 
-/**
- * A simple example of `AppBar` with an icon on the right.
- * By default, the left icon is a navigation-menu.
- */
-const AppBarExampleIcon = () => (
-  <AppBar
-    title="CivicMe"
-    iconClassNameRight="muidocs-icon-navigation-expand-more"
-  />
-);
+var Main = React.createClass({
+  render: function() {
+    return <h1>wwwwwaaaaasssssup</h1>
+  }
+});
 
-render(<AppBarExampleIcon/>, document.getElementById('#app');
+module.exports = Main;
