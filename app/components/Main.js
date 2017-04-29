@@ -1,9 +1,9 @@
 import React from 'react';
 
-var Main = React.createClass({
-  render: function() {
+class Main extends React.Component {
+  render() {
     return <h1>wwwwwaaaaasssssup</h1>
   }
-});
+}
 
-module.exports = Main;
+export default Main;

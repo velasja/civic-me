@@ -1,22 +1,26 @@
 import React from 'react';
-console.log(React);
-
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Match, Miss } from 'react-router-dom';
 
-import Root from "./config/routes";
-console.log(Root);
-import { BrowserRouter } from "./config/routes";
-console.log(BrowserRouter);
+// Reference the high-level components
+import Main from "./components/Main";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import Login from "./components/Login";
+// import Agenda from "../components/Agenda";
+import Register from "./components/Register";
+// var Dashboard = require("../components/Dashboard");
 
-//
-// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// import AppBarExampleIcon from './components/AppBar';
-// import TextFieldExampleSimple from './components/Login';
+const Root = () => {
+  <MuiThemeProvider>
+    <BrowserRouter>
+    <div>
+      <Match exactly pattern="/" component={Main} />
+      <Match pattern="/register" component={Register} />
+      <Match pattern="/login" component={Login} />
+      {/* <Miss component={NotFound} /> */}
+    </div>
+    </BrowserRouter>
+  </MuiThemeProvider>
+}
 
-// class Poop extends React.Component {
-//   render() {
-//     return <h1>PoooooooooooP💩</h1>
-//   }
-// }
-
-ReactDOM.render(<BrowserRouter/>, document.getElementById('app'));
+ReactDOM.render(<Root />, document.querySelector('#app'));

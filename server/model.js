@@ -3,13 +3,22 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var ItemSchema = new Schema({
-  item: {
+  number: {
     type: String
   },
   date: {
     type: Date
   },
-  url: {
+  meeting: {
+    type: String
+  },
+  backup: {
+    type: String
+  },
+  link: {
+    type: String
+  },
+  text: {
     type: String
   }
 });
